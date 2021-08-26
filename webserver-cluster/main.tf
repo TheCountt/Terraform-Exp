@@ -151,18 +151,20 @@ data "template_file" "user_data" {
     db_port     = data.terraform_remote_state.db.outputs.port
   }
 }
-# resource "aws_lb_listener" "asg" {
-#   listener   = aws_lb_listener.http.arn
-#   priority   = 100
-#   condition {
-#     field  = "path-pattern"
-#     values = ["*"]
-#   }
-#   action {
-#     type             = "forward"
-#     target_group_arn = aws.lb_target_group.asg.arn
-#   }
-# }
+
+// Testing out Terraform Cloud
+resource "aws_lb_listener" "asg" {
+  listener   = aws_lb_listener.http.arn
+  priority   = 100
+  condition {
+    field  = "path-pattern"
+    values = ["*"]
+  }
+  action {
+    type             = "forward"
+    target_group_arn = aws.lb_target_group.asg.arn
+  }
+}
 
 terraform {
   backend "s3" {
