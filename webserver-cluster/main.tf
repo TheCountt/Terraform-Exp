@@ -153,7 +153,7 @@ data "template_file" "user_data" {
 }
 
 // Testing out Terraform Cloud
-resource "aws_lb_listener" "asg" {
+resource "aws_lb_listener" "asg-testing" {
   listener   = aws_lb_listener.http.arn
   priority   = 100
   condition {
