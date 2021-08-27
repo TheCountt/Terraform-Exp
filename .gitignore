@@ -1,2 +1,4 @@
 var.tf
 terraform*
+variables.tf
+.terraform*
