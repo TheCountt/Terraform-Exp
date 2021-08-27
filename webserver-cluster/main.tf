@@ -1,5 +1,3 @@
-# provider "aws" { region = "us-west-1" }
-
 data "aws_vpc" "default" {
   default = true
 }
