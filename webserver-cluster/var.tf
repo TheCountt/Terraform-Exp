@@ -51,7 +51,7 @@ variable "custom_tags" {
 }
 
 variable "enable_autoscaling" {
-  description = "allow servers to scale horizontally in or out"
+  description = "allow servers to scale in or out"
   type = bool
 }
 
